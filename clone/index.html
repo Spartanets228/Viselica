@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Виселица — Ребусы и загадки (клон)</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Игра «Виселица»</h1>
+        <p class="lead">Угадайте слово по буквам. Ошибок допустимо 7.</p>
+    </header>
+    <main class="container">
+        <section class="controls">
+            <label for="theme">Тема:</label>
+            <select id="theme">
+                <option value="animals">Животные</option>
+                <option value="fruits">Фрукты</option>
+                <option value="countries">Страны</option>
+                <option value="mixed">Разное</option>
+            </select>
+            <button id="startBtn">Начать игру</button>
+            <button id="resetBtn" class="secondary">Сброс</button>
+        </section>
+        <section class="game-area">
+            <div class="left">
+                <canvas id="gallows" width="300" height="300" aria-label="Рисунок виселицы"></canvas>
+                <div id="status" class="status">Нажмите «Начать игру»</div>
+            </div>
+            <div class="right">
+                <div id="word" class="word" aria-live="polite"></div>
+                <div id="alphabet" class="alphabet" aria-label="Буквы"></div>
+                <div class="info">Ошибок: <span id="wrongCount">0</span>/7</div>
+            </div>
+        </section>
+        <section class="footer-note">
+            <p></p>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
