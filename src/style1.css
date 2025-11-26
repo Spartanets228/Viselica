@@ -1,0 +1,108 @@
+:root{
+    --bg:#f6f7fb;
+    --card:#ffffff;
+    --accent:#2b6cb0;
+    --muted:#6b7280;
+}
+*{
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+}
+header{
+    text-align:center;
+}
+body{
+    margin:0;
+    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:linear-gradient(180deg,var(--bg),#ffffff);
+    color:#0f172a;
+}
+.site-header{
+    background:var(--card);
+    padding:20px 24px;
+    border-bottom:1px solid rgba(15,23,42,0.04);
+}
+.site-header h1{
+    margin:0;
+    font-size:1.5rem;
+}
+.lead{
+    margin:6px 0 0;
+    color:var(--muted);
+}
+.container{
+    max-width:980px;
+    margin:28px auto;
+    padding:16px;
+}
+.controls{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:18px;
+}
+.controls select, .controls button{
+    padding:8px 12px;
+    border-radius:8px;
+    border:1px solid rgba(15,23,42,0.08);
+    background:white;
+}
+.controls .secondary{
+    background:transparent;
+    border:1px dashed rgba(15,23,42,0.06);
+}
+.game-area{
+    display:flex;
+    gap:24px;
+}
+.left{
+    width:320px;
+}
+.right{
+    flex:1;
+}
+#gallows{
+    background:#fbfdff;
+    border-radius:10px;
+    border:1px solid rgba(15,23,42,0.04);
+    display:block;
+}
+.status{
+    margin-top:12px;
+    font-size:0.95rem;
+    color:var(--muted);
+}
+.word{
+    font-size:2rem;
+    letter-spacing:10px;
+    margin:18px 0;
+    min-height:3rem;
+}
+.alphabet{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+.alphabet button{
+    min-width:50px;
+    padding:8px;
+    border-radius:8px;
+    border:1px solid rgba(15,23,42,0.06);
+    background:white;
+    cursor:pointer;
+}
+.alphabet button[disabled]{
+    opacity:0.45;
+    cursor:default;
+}
+.info{
+    margin-top:12px;
+    color:var(--muted);
+}
+.footer-note{
+    margin-top:28px;
+    color:var(--muted);
+    font-size:0.9rem;
+}
